@@ -14,8 +14,16 @@ class PageViewModel : ViewModel() {
     }
 
     val title: LiveData<String> = Transformations.map(_index) {
-        "Tab $it"
+//        "Tab $it"
+        when(it)
+        {
+            1-> "과학"
+            2-> "스포츠"
+            else->"에러"
+        }
+
     }
+
 
     fun setIndex(index: Int) {
         _index.value = index

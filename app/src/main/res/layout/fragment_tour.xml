@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.ui.main.PlaceholderFragment">
 
+    
     <TextView
         android:id="@+id/section_label"
         android:text="안녕하세요"
@@ -26,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="0dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
