@@ -26,6 +26,7 @@ class ScrapFragment : Fragment()
         val root = inflater.inflate(R.layout.fragment_scrap, container, false)
         val textView: TextView = root.findViewById(R.id.text_scrap)
         scrapViewModel.text.observe(viewLifecycleOwner, Observer {
+            // 데이터의 변경이 이루어졌을 떄 실행할 작업
             textView.text = it
         })
         return root

@@ -1,10 +1,12 @@
 package com.example.up.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.core.os.bundleOf
@@ -48,6 +50,15 @@ class HomeFragment : Fragment()
                     .replace(R.id.nav_host_fragment,CommunityFragment())
                     .commit()
         }
+
+
+        val intentButton : Button= root.findViewById(R.id.intent_button)
+
+        intentButton.setOnClickListener {
+            val intent = Intent(activity, Tour::class.java)
+            startActivity(intent)
+        }
+
         return root
     }
 

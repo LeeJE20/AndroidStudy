@@ -8,20 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.UP">
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
-            android:name=".PagerTest"
-            android:label="@string/title_activity_pager_test"
-            android:theme="@style/Theme.UP.NoActionBar">
-
-
-
+            android:name=".ui.home.Tour"
+            android:label="@string/title_activity_tour"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:parentActivityName=".MainActivity">
         </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:noHistory="false">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
