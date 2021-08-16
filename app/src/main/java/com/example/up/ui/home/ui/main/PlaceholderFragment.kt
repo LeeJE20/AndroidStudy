@@ -4,11 +4,14 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -146,6 +149,17 @@ class PlaceholderFragment : Fragment() {
 //        recycler_view.adapter = adapter
         // 레이아웃 매니저 설정
 //        recycler_view.layoutManager = LinearLayoutManager(activity)
+
+
+
+        val open_drawer: Button = root.findViewById(R.id.open_drawer)
+        val drawer: DrawerLayout = root.findViewById(R.id.drawer)
+        open_drawer.setOnClickListener {
+
+            if (!drawer.isDrawerOpen(Gravity.RIGHT)) {
+                drawer.openDrawer(Gravity.RIGHT) ;
+            }
+        }
 
         Log.d("E/RecyclerView", "리턴")
         return root
